@@ -1,16 +1,18 @@
+import java.math.BigInteger;
+
 /*
  * Name: praveen
  * Email: sripraveen2810@gmail.com
  */
 public class Factorial {
-    public static long factorial(int n) {
+    public static BigInteger factorial(int n) {
         if (n < 0) {
             throw new IllegalArgumentException("Factorial is undefined for negative numbers.");
         }
         if (n == 0 || n == 1) {
-            return 1;
+            return BigInteger.ONE;
         }
-        return n * factorial(n - 1);
+        return BigInteger.valueOf(n).multiply(factorial(n - 1));
     }
 
     public static void main(String[] args) {
