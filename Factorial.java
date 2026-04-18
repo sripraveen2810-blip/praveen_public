@@ -20,6 +20,10 @@ public class Factorial {
         }
 
         int number = Integer.parseInt(args[0]);
+        if (number >= 100) {
+            System.out.println("Please provide a number less than 100.");
+            return;
+        }
         System.out.println("Factorial of " + number + " is " + factorial(number));
     }
 }
